@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Script with Animations</title>
+  <style>
+    /* General styles for the page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Container styling with animation */
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    /* Title and text */
+    h1 {
+      font-size: 24px;
+      color: #333;
+      animation: popIn 1s ease-in-out 0.5s backwards;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      animation: popIn 1s ease-in-out 0.7s backwards;
+    }
+
+    /* Download button styling */
+    .download-button {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    .download-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Download My Script</h1>
+    <p>Click the button below to download the shell script.</p>
+    <a href="your-script.sh" download class="download-button">Download Script</a>
+  </div>
+</body>
+</html>
